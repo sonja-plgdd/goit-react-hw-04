@@ -1,8 +1,8 @@
 import s from "./ImageCard.module.css";
 
-function ImageCard({ src, alt }) {
+function ImageCard({ src, alt, openModal }) {
   return (
-    <div>
+    <div onClick={openModal}>
       <img src={src} alt={alt} className={s.img} />
     </div>
   );

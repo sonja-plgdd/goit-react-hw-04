@@ -9,12 +9,18 @@ function ImageGallery({ images, openModal }) {
           <li
             key={image.id}
             className={s["img-gallery-item"]}
-            onClick={() => {
-              openModal(image);
-            }}
+            // onClick={() => {
+            //   openModal(image);
+            // }}
           >
             <div>
-              <ImageCard src={image.urls.small} alt={image.description} />
+              <ImageCard
+                src={image.urls.small}
+                alt={image.description}
+                openModal={() => {
+                  openModal(image);
+                }}
+              />
             </div>
           </li>
         );
